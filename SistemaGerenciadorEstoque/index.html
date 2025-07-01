@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Sistema de Gerenciamento de Estoque</h1>
+
+    <div id="item-form">
+        <h2>Adicionar novo item ao estoque</h2>
+        <form id="item-formulario" action="salvar_produto.php" method="POST">
+
+            <label for="item-name">Nome:</label>
+            <input type="text" id="item-name" name="nomeProd" required>
+
+            <label for="item-description">Descrição:</label>
+            <textarea id="item-description" name="descricaoProd" required></textarea>
+
+            <label for="item-category">Categoria:</label>
+            <input type="text" id="item-category" name="categoriaProd" required>
+
+            <label for="item-size">Tamanho:</label>
+            <input type="text" id="item-size" name="tamanhoProd" required>
+
+            <label for="item-color">Cor:</label>
+            <input type="text" id="item-color" name="corProd" required>
+
+            <label for="item-price">Preço de Venda:</label>
+            <input type="number" id="item-price" name="precoVenda" min="0" step="0.01" required>
+
+            <label for="item-purchase-price">Preço de Compra:</label>
+            <input type="number" id="item-purchase-price" name="precoCompra" min="0" step="0.01" required>
+
+            <label for="item-purchase-date">Data de Compra:</label>
+            <input type="date" id="item-purchase-date" name="dataCompra" required>
+
+            <button type="submit">Salvar Produto</button>
+            <button type="button" id="add-item-btn">Adicionar na Tabela</button>
+        </form>
+    </div>
+
+    <div id="item-list">
+        <h2>Lista de itens no estoque</h2>
+        <input type="text" id="search-box" placeholder="Pesquisar...">
+        <table>
+            <thead id="table-header">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Tamanho</th>
+                    <th>Cor</th>
+                    <th>Preço</th>
+                    <th>Preço de Compra</th>
+                    <th>Data de Compra</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="item-table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>

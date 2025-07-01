@@ -1,0 +1,166 @@
+/* DESENVOLVIDO BY ROBS */
+
+/* Fonte padrão */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cores principais */
+:root {
+  --rosa-claro: #ffb6d9;
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: var(--rosa-claro);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: white;
+  color: rgb(5, 5, 5);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar button:hover {
+  background-color: #ffe2f0;
+}
+
+/* Conteúdo principal */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  color: var(--rosa-claro);
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  color: var(--rosa-claro);
+  font-size: 2.5em;
+}
+
+h2 {
+  color: var(--rosa-claro);
+  text-align: center;
+}
+
+/* Formulários */
+form {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: black;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--rosa-claro);
+  font-size: 1.1em;
+  width: 100%;
+}
+
+/* Botão */
+button#add-btn {
+  background-color: var(--rosa-claro);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* Tabela */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 8px;
+}
+
+thead {
+  background-color: var(--rosa-claro);
+  color: white;
+}
+
+/* Campo de busca */
+#search-box {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--rosa-claro);
+  font-size: 1.1em;
+  width: 300px;
+}
+
+/* estilo base para ambos os botões */
+#item-formulario button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* botão de adicionar na tabela */
+#add-item-btn {
+  background-color: #ffb6d9; 
+  color: white;
+  margin-top: 10px;
+}
+
+#add-item-btn:hover {
+  background-color: #ffb6d9;
+  transform: scale(1.03);
+}
+
+/* botão de salvar no banco de dados */
+#item-formulario button[type="submit"] {
+  background-color: #ffb6d9; 
+  color: white;
+  margin-bottom: 10px;
+}
+
+#item-formulario button[type="submit"]:hover {
+  background-color: #ffb6d9;
+  transform: scale(1.03);
+}
+
