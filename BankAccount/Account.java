@@ -1,10 +1,10 @@
-package ex11;
+package BackAccount;
 
 public class Account {
     int number;
     String holder;
     static double balance;
-    static double WithDrawLimit; // limite do saque
+    static double WithDrawLimit; // Draw limit
 
     public static double getBalance() {
         return balance;
@@ -34,10 +34,10 @@ public class Account {
 
     public static void validateWithdraw(double amount) {
         if (amount > getWithDrawLimit()) {
-            throw new BusinessException("Erro ao sacar: A quantia excede o limite de saque ");
+            throw new BusinessException("Withdrawal error: The amount exceeds the withdrawal limit");
         }
         if (amount > getBalance()) {
-            throw new BusinessException("Erro ao sacar: Saldo insuficiente");
+            throw new BusinessException("Withdrawal error: Insufficient balance");
         }
     }
 
