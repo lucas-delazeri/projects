@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hours System</title>
+</head>
+<body>
+  <div class="container">
+    <img class="image" src="https://media.istockphoto.com/id/1031786258/pt/vetorial/watch.jpg?s=612x612&w=0&k=20&c=b7kDrPvObTkgBNZF70mQI5HNoaLec_nkWhc_i_07d6s=">
+    <h1>Hours</h1>
+    <div id="resultado"></div>
+  </div>
+  <script>
+    function verHora() {
+      const resultado = document.getElementById('resultado');
+      const agora = new Date();
+      const hora = String(agora.getHours()).padStart(2, '0');
+      const minuto = String(agora.getMinutes()).padStart(2, '0');
+      const segundo = String(agora.getSeconds()).padStart(2, '0');
+      const img = document.querySelector('.image');
+
+      // Aplica o blur
+      img.classList.add('blur');
+
+      // Define a imagem com base na hora
+      setTimeout(() => {
+         if (hora >= 18 || hora < 6) {
+                img.src = "https://static.vecteezy.com/ti/fotos-gratis/t1/8440112-paisagem-noite-em-fprest-com-lua-cheia-e-nuvens-foto.jpg"; // lua
+            }
+            else if (hora > 5 && hora < 12) {
+                img.src = "https://media.istockphoto.com/id/1552395349/pt/foto/aerial-landscape-view-of-yellow-cultivated-agricultural-field-with-ripe-wheat-on-vibrant.jpg?s=612x612&w=0&k=20&c=0HTZVBS3eghHcl0GmIR9G2qmKrV5-JaqZVBqjY-rkhw="; // amanhecer
+            }
+            else if (hora >= 12 && hora < 18) {
+                img.src = "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia4555/cpt-centro-producoes-tecnicas-entardecer-para-refletir.jpg"; // entardecer
+            }
+        // Remove o blur após a transição
+        setTimeout(() => {
+          img.classList.remove('blur');
+        }, 1000);
+      }, 100);
+
+      // Atualiza o relógio
+      resultado.innerHTML = `<h2>${hora}:${minuto}:${segundo}</h2>`;
+    }
+
+    // Atualiza o relógio a cada 1 segundo
+    setInterval(verHora, 1000);
+    verHora(); // atualiza imediatamente
+
+  </script>
+  
+</body>
+ <footer class="footer-bar">
+    <a href="indexee.html" class="footer-link">
+      <i class="fas fa-home"></i><br>
+    </a>
+    <a href="#relogio" class="footer-link">
+      <i class="fas fa-clock"></i><br>
+    </a>
+    <a href="#sobre" class="footer-link">
+      <i class="fas fa-info-circle"></i><br>
+    </a>
+</footer>
+
+
+</html>
